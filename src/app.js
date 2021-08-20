@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Home } from "./pages";
+import { Home, Browse, SignIn, SignUp } from "./pages";
 import * as ROUTES from "./constants/routes";
 
 function App() {
@@ -10,13 +10,13 @@ function App() {
         <Home />
       </Route>
       <Route exact path={ROUTES.BROWSE}>
-        <h1>BROWSE</h1>
+        <Browse />
       </Route>
       <Route exact path={ROUTES.SIGN_IN}>
-        <h1>SIGNIN</h1>
+        <SignIn />
       </Route>
       <Route exact path={ROUTES.SIGN_UP}>
-        <h1>SIGNUP</h1>
+        <SignUp />
       </Route>
     </Router>
   );
