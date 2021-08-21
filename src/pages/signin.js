@@ -19,17 +19,17 @@ export default function SignIn() {
   const handleSignin = (event) => {
     event.preventDefault();
 
-    // return firebase
-    //   .auth()
-    //   .signInWithEmailAndPassword(emailAddress, password)
-    //   .then(() => {
-    //     history.push(ROUTES.BROWSE);
-    //   })
-    //   .catch((error) => {
-    //     setEmailAddress('');
-    //     setPassword('');
-    //     setError(error.message);
-    //   });
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(emailAddress, password)
+      .then(() => {
+        history.push(ROUTES.BROWSE);
+      })
+      .catch((error) => {
+        setEmailAddress("");
+        setPassword("");
+        setError(error.message);
+      });
   };
 
   return (
